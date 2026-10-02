@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Boyfriend's Day, Aditya ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  font-family:"Georgia",serif;
+  background:linear-gradient(135deg,#fff,#ffe5e9,#fff);
+  color:#8b1020;
+}
+
+.hearts span{
+  position:absolute;
+  color:#e63950;
+  font-size:25px;
+  animation:float 7s linear infinite;
+  opacity:.7;
+}
+.hearts span:nth-child(1){left:8%;animation-delay:0s}
+.hearts span:nth-child(2){left:20%;animation-delay:2s}
+.hearts span:nth-child(3){left:35%;animation-delay:4s}
+.hearts span:nth-child(4){left:55%;animation-delay:1s}
+.hearts span:nth-child(5){left:72%;animation-delay:3s}
+.hearts span:nth-child(6){left:90%;animation-delay:5s}
+
+@keyframes float{
+  0%{transform:translateY(110vh) rotate(0);opacity:0}
+  20%{opacity:.8}
+  100%{transform:translateY(-15vh) rotate(360deg);opacity:0}
+}
+
+.container{
+  width:90%;
+  max-width:430px;
+  text-align:center;
+  z-index:2;
+}
+
+h1{
+  color:#c91835;
+  font-size:30px;
+  margin-bottom:25px;
+  text-shadow:0 2px 8px #ffb3bd;
+}
+
+.envelope{
+  position:relative;
+  width:300px;
+  height:205px;
+  margin:auto;
+  cursor:pointer;
+  perspective:1000px;
+}
+
+.back{
+  position:absolute;
+  inset:0;
+  background:#e63950;
+  border-radius:8px;
+  box-shadow:0 12px 30px #b91c3b55;
+}
+
+.paper{
+  position:absolute;
+  width:270px;
+  height:175px;
+  left:15px;
+  top:15px;
+  background:#fffdf8;
+  border-radius:5px;
+  padding:20px;
+  color:#8b1020;
+  font-size:14px;
+  line-height:1.5;
+  transform:translateY(0);
+  transition:1s ease;
+  z-index:2;
+}
+
+.flap{
+  position:absolute;
+  left:0;
+  top:0;
+  width:0;
+  height:0;
+  border-left:150px solid transparent;
+  border-right:150px solid transparent;
+  border-top:110px solid #ff6b7d;
+  transform-origin:top;
+  transition:1s ease;
+  z-index:4;
+}
+
+.bottom{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:0;
+  border-left:150px solid transparent;
+  border-right:150px solid transparent;
+  border-bottom:105px solid #d92745;
+  z-index:3;
+}
+
+.seal{
+  position:absolute;
+  left:125px;
+  top:78px;
+  width:50px;
+  height:50px;
+  background:#fff;
+  color:#e63950;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:25px;
+  z-index:5;
+  box-shadow:0 3px 10px #8b102055;
+  transition:.5s;
+}
+
+.hint{
+  margin-top:22px;
+  color:#b51e35;
+  font-size:16px;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.05)}
+}
+
+/* OPEN */
+.envelope.open .flap{
+  transform:rotateX(180deg);
+  z-index:1;
+}
+
+.envelope.open .seal{
+  opacity:0;
+}
+
+.envelope.open .paper{
+  transform:translateY(-150px);
+  height:300px;
+  width:290px;
+  left:5px;
+  z-index:6;
+  box-shadow:0 8px 25px #b91c3b33;
+}
+
+.message{
+  display:none;
+}
+
+.envelope.open .message{
+  display:block;
+}
+
+.message h2{
+  color:#d7193f;
+  margin-top:5px;
+  font-size:22px;
+}
+
+.message p{
+  margin:10px 0;
+}
+
+.signature{
+  margin-top:18px;
+  font-size:18px;
+  font-style:italic;
+  color:#c91835;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+  <span>❤️</span>
+  <span>💗</span>
+  <span>💕</span>
+  <span>❤️</span>
+  <span>💖</span>
+  <span>💗</span>
+</div>
+
+<div class="container">
+
+<h1>Happy Boyfriend's Day ❤️</h1>
+
+<div class="envelope" onclick="openLetter()">
+
+  <div class="back"></div>
+
+  <div class="paper">
+    <div class="message">
+      <h2>Dear Aditya ❤️</h2>
+
+      <p>
+      Happy Boyfriend's Day to the most special person in my life. 💕
+      </p>
+
+      <p>
+      You make my ordinary days feel beautiful just by being there.
+      Your smile makes me happy, your words make me feel safe,
+      and having you in my life is something I will always treasure. 🥹❤️
+      </p>
+
+      <p>
+      Thank you for all the little things you do, for making me smile,
+      and for being my favourite person. 💗
+      </p>
+
+      <p>
+      I hope we keep making countless beautiful memories together.
+      No matter what happens, you'll always have a very special place
+      in my heart. ❤️
+      </p>
+
+      <p><b>Happy Boyfriend's Day, Aditya! 💋❤️</b></p>
+
+      <div class="signature">
+        With all my love,<br>
+        Your favourite person ❤️
+      </div>
+    </div>
+  </div>
+
+  <div class="flap"></div>
+  <div class="bottom"></div>
+  <div class="seal">❤️</div>
+
+</div>
+
+<div class="hint">💌 Tap the letter to open it 💌</div>
+
+</div>
+
+<script>
+function openLetter(){
+  document.querySelector(".envelope").classList.toggle("open");
+
+  if(document.querySelector(".envelope").classList.contains("open")){
+    document.querySelector(".hint").innerHTML =
+      "💖 A little letter, written just for Aditya 💖";
+  }else{
+    document.querySelector(".hint").innerHTML =
+      "💌 Tap the letter to open it 💌";
+  }
+}
+</script>
+
+</body>
+</html>
